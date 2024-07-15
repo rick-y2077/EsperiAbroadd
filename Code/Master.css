@@ -1,0 +1,13 @@
+:root{
+    --blank: #d5d9ea;
+    --light: #86b3cb;
+    --lightblue: #82d4ed;
+    --primary: #3abae3;
+    --dark: #0c77a8;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}

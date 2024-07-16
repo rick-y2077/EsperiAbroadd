@@ -32,7 +32,7 @@
 .elements a {
   text-decoration: none;
   color: var(--superdark);
-  padding: 1rem;
+  padding: 1rem; /* Mantenuto il padding originale */
   font-family: 'Viga';
   display: flex;
   align-items: center;
@@ -55,7 +55,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  top: calc(100% + 10px); /* Adjust top positioning as needed */
+  top: calc(100% - 1px); /* Adjust top positioning to align with the button */
   left: 0;
   z-index: 1;
   text-align: left;

@@ -8,6 +8,8 @@
 
 }
 
+
+
 *{
     margin: 0;
     padding: 0;
@@ -33,6 +35,7 @@
 .dropdown{
   margin: 1vb;
   padding: 1vb;
+  font-family: 'Viga';
 }
 
 .elements a {
@@ -40,6 +43,7 @@
   color: var(--superdark);
   margin: 1vb;
   padding: 1vb;
+  font-family: 'Viga';
 }
 
 
@@ -53,7 +57,8 @@
     display: none;
     position: absolute;
     z-index: 1;
+    font-family: 'Viga';
   }
 
   /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block; flex-direction: column;}
+.dropdown:hover .dropdown-content {display: flex; flex-direction: column;}

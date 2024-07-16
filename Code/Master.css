@@ -62,3 +62,23 @@
 
   /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: flex; flex-direction: column;}
+
+
+
+/* Aggiunge spaziatura agli elementi del dropdown e una sottile cornice rettangolare */
+.dropdown-content .dropdown-item {
+  border: hidden; 
+}
+
+.dropdown-content .dropdown-item a {
+  display: block; /* Assicura che i link occupino l'intero spazio dell'elemento */
+  width: 100%; /* Allinea gli elementi al dropdown */
+  text-decoration: none; /* Rimuove la sottolineatura dai link */
+  color: var(--superdark); /* Colore del testo */
+}
+
+.dropdown-content .dropdown-item a:hover {
+  background-color: var(--blank); /* Colore di sfondo quando si passa il mouse sopra un elemento */
+  border: 0.1vb solid var(--superdark); /* Colore della cornice */
+  border-radius: 1vb; /* Aggiunge bordi arrotondati */
+}

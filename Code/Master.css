@@ -1,84 +1,89 @@
-:root{
-    --blank: #d5d9ea;
-    --light: #86b3cb;
-    --lightblue: #82d4ed;
-    --primary: #3abae3;
-    --dark: #0c77a8;
-    --superdark: #134783;
-
+:root {
+  --blank: #d5d9ea;
+  --light: #86b3cb;
+  --lightblue: #82d4ed;
+  --primary: #3abae3;
+  --dark: #0c77a8;
+  --superdark: #134783;
 }
 
-
-
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.navbar{
+.navbar {
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
 }
 
-
-.logo img{
-  position: inherit;
+.logo img {
   width: 10vw;
-  padding: 0.5vb;
+  padding: 0.5rem;
 }
 
-.elements{
+.elements {
   display: flex;
-}
-
-.dropdown{
-  margin: 1vb;
-  padding: 1vb;
-  font-family: 'Viga';
+  align-items: center;
 }
 
 .elements a {
   text-decoration: none;
   color: var(--superdark);
-  margin: 1vb;
-  padding: 1vb;
+  padding: 1rem;
   font-family: 'Viga';
+  display: flex;
+  align-items: center;
+  position: relative; /* Posizione relativa per posizionare il dropdown assoluto */
+  margin-left: 1rem; /* Add margin-left for spacing between elements */
 }
 
+.elements a:first-child {
+  margin-left: 0; /* Remove margin-left from the first child to avoid extra space on the left */
+}
 
+.elements a:hover {
+  color: var(--dark);
+}
 
+.dropdown {
+  position: relative;
+}
 
-/* The container <div> - needed to position the dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: calc(100% + 10px); /* Adjust top positioning as needed */
+  left: 0;
+  z-index: 1;
+  text-align: left;
+  padding: 0.5rem 0;
+  background-color: white; /* Optional: set background color for dropdown */
+  border: 1px solid var(--superdark); /* Optional: add border for dropdown */
+  width: max-content; /* Adjust width as needed */
+}
 
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    font-family: 'Viga';
-  }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-  /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: flex; flex-direction: column;}
-
-
-
-/* Aggiunge spaziatura agli elementi del dropdown e una sottile cornice rettangolare */
 .dropdown-content .dropdown-item {
-  border: hidden; 
+  /* Remove border */
+  border: none;
+  padding: 0; /* Remove padding to ensure no additional space */
 }
 
 .dropdown-content .dropdown-item a {
-  display: block; /* Assicura che i link occupino l'intero spazio dell'elemento */
-  width: 100%; /* Allinea gli elementi al dropdown */
-  text-decoration: none; /* Rimuove la sottolineatura dai link */
-  color: var(--superdark); /* Colore del testo */
+  display: block;
+  text-decoration: none;
+  color: var(--superdark);
+  padding: 0.5rem 1rem;
+  text-align: left;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .dropdown-content .dropdown-item a:hover {
-  background-color: var(--blank); /* Colore di sfondo quando si passa il mouse sopra un elemento */
-  border: 0.1vb solid var(--superdark); /* Colore della cornice */
-  border-radius: 1vb; /* Aggiunge bordi arrotondati */
+  color: var(--dark);
 }

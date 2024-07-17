@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Viga&display=swap");
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -373,7 +374,7 @@ a {
 }
 
 main{
-  background-color: red;
+  background-color: transparent;
   grid-area: main;
 }
 
@@ -402,11 +403,7 @@ footer{
   grid-area: footer;
 }
 
-/*
-         <main>main title</main>
-         <div id="content1">content1</div>
-         <div id="content2">content2</div>
-         <div id="articles">articles</div>
-         <div id="moreText">more text</div>
-         <footer>Footer</footer>
-*/
+/* Hide scrollbar for WebKit browsers */
+::-webkit-scrollbar {
+  display: none;
+}

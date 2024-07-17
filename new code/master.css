@@ -42,10 +42,25 @@
   margin: 0;
 }
 
+
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
+
+
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr;
+
+  grid-template-areas: 
+    "main main"
+    "content1 content2"
+    "articles articles"
+    "moreText moreText"
+    "footer footer";
+    grid-gap: 0.2rem;
 }
 
 ul {
@@ -149,6 +164,22 @@ a {
     background-color: var(--white);
     padding-top: 1rem;
   }
+
+
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.7fr;
+
+    grid-template-areas: 
+      "main"
+      "content1"
+      "content2"
+      "articles"
+      "moreText"
+      "footer";
+  }
+
+
 }
 
 .nav__link {
@@ -340,3 +371,42 @@ a {
     transition: top .3s;
   }
 }
+
+main{
+  background-color: red;
+  grid-area: main;
+}
+
+#content1{
+  background-color: green;
+  grid-area: content1;
+}
+
+#content2{
+  background-color: blue;
+  grid-area: content2;
+}
+
+#articles{
+  background-color: yellowgreen;
+  grid-area: articles;
+}
+
+#moreText{
+  background-color: violet;
+  grid-area: moreText;
+}
+
+footer{
+  background-color: orangered;
+  grid-area: footer;
+}
+
+/*
+         <main>main title</main>
+         <div id="content1">content1</div>
+         <div id="content2">content2</div>
+         <div id="articles">articles</div>
+         <div id="moreText">more text</div>
+         <footer>Footer</footer>
+*/

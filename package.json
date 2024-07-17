@@ -1,0 +1,19 @@
+{
+  "name": "esperiabroadd",
+  "version": "1.0.0",
+  "description": "esperiaabroad",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/rick-y2077/EsperiAbroadd"
+  },
+  "keywords": [
+    "esperiabroad"
+  ],
+  "author": "rickgraas",
+  "license": "ISC",
+  "type": "module"
+}

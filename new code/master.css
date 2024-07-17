@@ -145,6 +145,25 @@ a {
   opacity: 0;
 }
 
+
+/*----------FOOTER-----------*/
+.footer{
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr;
+
+  grid-template-areas: 
+    "main main"
+    "content1 content2"
+    "articles articles"
+    "moreText moreText"
+    "footer footer";
+    grid-gap: 0.2rem;
+}
+
+
+
 /* Navigation for mobile devices */
 @media screen and (max-width: 1118px) {
   .nav__menu {

@@ -1,27 +1,12 @@
 const express = require('express')
+const branilianRouter = require('./router.js')
 
 const app = express()
 
-//app.get("/", (req, res) => {
-//  res.send("messaggio")
-//})
-
-function formatURL(path){
-  if(path == '/')
-    path+='index'
-  return "/public/routes" + path + ".html"
-}
-
+// Static files are served from the public directory
 app.use(express.static("public"))
-app.use((req, res) => {
-  console.log(__dirname)
-  const dir = __dirname.slice(0, -4)
-  const page = formatURL(req.path)
-  res.sendFile(dir + page, (err) => {
-    res.status(404)
-    res.redirect("/error")
-    console.log(err)
-  })
-})
+
+// The branilianRouter handles all the other requests
+app.use(branilianRouter)
 
 app.listen(3000)

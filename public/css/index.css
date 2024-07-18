@@ -1,0 +1,29 @@
+.main-text{
+    position: absolute; 
+    top: 50%; left: 50%; 
+    transform: translate(-50%, -50%);
+    font-family: var(--body-font); font-weight: bold; 
+    font-size: calc(5vw + 3em); 
+    text-shadow: 2px 2px var(--dark-grey);
+    color: var(--blue); font-family: 'Viga';
+}
+
+.main-image{
+
+    width: 100%; 
+    object-fit: cover; 
+    z-index: 1;
+}
+
+@media screen and (max-width: 340px) {
+    .main-image{
+        height: 50vh; 
+    }
+}
+  
+  /* For large devices */
+  @media screen and (min-width: 1118px) {
+        .main-image{
+            height: 100vh; 
+        }
+    }

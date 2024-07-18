@@ -13,6 +13,7 @@
   --black: hsl(220, 24%, 15%);
   --dark-grey: hsl(220, 20%, 18%);
   --blue: #134783;
+  --light-grey: #D0D0D0;
   --body-color: hsl(220, 100%, 97%);
 
   /*========== Font and typography ==========*/
@@ -146,10 +147,9 @@ a {
 }
 
 
-/*----------FOOTER-----------*/
+/*----------FOOTER GRID-----------*/
 .footer{
   display: grid;
-  height: 100vh;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr;
 
@@ -417,12 +417,10 @@ main{
   grid-area: moreText;
 }
 
-footer{
-  background-color: orangered;
-  grid-area: footer;
-}
-
 /* Hide scrollbar for WebKit browsers */
 ::-webkit-scrollbar {
   display: none;
 }
+
+/*==========================FOOTER=============================*/
+

@@ -9,6 +9,7 @@
 
       <!--=============== CSS ===============-->
       <link rel="stylesheet" href="../css/master.css">
+      <link rel="stylesheet" href="../css/index.css">
 
        <!--=============== FAVICON ===============-->
       <link rel="icon" type="image/x-icon" href="/content/favicon.ico">
@@ -25,7 +26,7 @@
             <nav class="nav container">
                <div class="nav__data">
                   <a href="index.html" class="nav__logo">
-                     <img class="logo_scritta" src="../content/logo_scritta.png" alt="logo" srcset="" style="width: 15rem;">
+                     <img src="../content/logo_scritta.png" alt="logo" srcset="" style="width: 15rem;">
                   </a>
 
                   <div class="nav__toggle" id="nav-toggle">
@@ -114,23 +115,60 @@
             </nav>
 
          </header>
-         <main>
-            <img src="../content/index /European Parliament building.jpg" alt="img_parlamento" srcset="" style="width: 100%; height: 100svh; z-index: 1;">
-            <div style=" position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-                         font-family: var(--body-font); font-weight: bold; font-size: 8svw;   text-shadow: 2px 2px var(--dark-grey);
-                        color: var(--blue); font-family: 'Viga';">BENVENUTO</div>
-         </main>
+         <main>  
+            <img class="main-image" src="../content/index /European Parliament building.jpg" alt="img_parlamento">
+            <div class="main-text">BENVENUTO</div>
+      </main>
          <div id="content1">content1</div>
          <div id="content2">content2</div>
          <div id="articles">articles</div>
          <div id="moreText">more text</div>
          <footer class="footer">
-            <div id="logoFooter">logoFooter</div>
-            <div id="social">social</div>
-            <div id="contatti">contatti</div>
-            <div id="copyright">copyright</div> <!--© COPYRIGHT ITIS PALEOCAPA 2023-2024--->
+            <ul class="social-icon">
+               <li class="icon-elem">
+                  <a href="" class="icon">
+                     <ion-icon name="logo-youtube"></ion-icon>            
+                  </a>                           
+               </li>
+               <li class="icon-elem">
+                  <a href="" class="icon">
+                     <ion-icon name="logo-instagram"></ion-icon>
+                  </a>                           
+               </li>
+               <li class="icon-elem">
+                  <a href="" class="icon">
+                     <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+               <li class="icon-elem">
+                  <a href="" class="icon">
+                     <ion-icon name="mail-outline"></ion-icon> 
+                  </a>                           
+               </li>
+            </ul>
+            <ul class="menu">
+               <li class="menu-elem">
+                  <a href="" class="menu-icon"> Inicio </a>
+               </li>
+               <li class="menu-elem">
+                  <a href="" class="menu-icon"> Equipo </a>
+               </li>
+               <li class="menu-elem">
+                  <a href="" class="menu-icon"> Contacto </a>
+               </li>
+               <li class="menu-elem">
+                  <a href="" class="menu-icon"> Video </a>
+               </li>
+               <li class="menu-elem">
+                  <a href="" class="menu-icon"> Sobre Nosotros </a>
+               </li>
+            </ul>
+            <p class="text">@Ano | Todos los derechos reservados</p>             
          </footer>
+
+
          <!--=============== MAIN JS ===============-->
-         <script src="/js/functions.js"></script>
+         <script src="../js/functions.js"></script>
+         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
    </body>
 </html>

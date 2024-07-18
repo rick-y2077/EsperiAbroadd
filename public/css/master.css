@@ -148,19 +148,6 @@ a {
 
 
 /*----------FOOTER GRID-----------*/
-.footer{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr;
-
-  grid-template-areas: 
-    "main main"
-    "content1 content2"
-    "articles articles"
-    "moreText moreText"
-    "footer footer";
-    grid-gap: 0.2rem;
-}
 
 
 
@@ -424,3 +411,71 @@ main{
 
 /*==========================FOOTER=============================*/
 
+.footer {
+  grid-area: footer;
+  background: var(--blue);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin: 10px 5px;
+  flex-wrap: wrap;
+}
+
+.icon-elem{
+  list-style: none;
+}
+
+.icon{
+  color: var(--white);
+  font-size: 32px;
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+.icon:hover{
+  transform: translateY(-10px);
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+.menu-elem{
+  list-style: none;
+}
+
+.menu-icon{
+  color: var(--white);
+  font-size: 20px;
+  display: inline-block;
+  margin: 5px 10px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.menu-icon:hover{
+  opacity: 1;
+}
+
+.text{
+  color: var(--white);
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}

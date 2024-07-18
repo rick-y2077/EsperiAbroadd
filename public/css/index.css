@@ -1,29 +1,40 @@
 .main-text{
     position: absolute; 
-    top: 50%; left: 50%; 
+    left: 50%; 
     transform: translate(-50%, -50%);
     font-family: var(--body-font); font-weight: bold; 
     font-size: calc(5vw + 3em); 
     text-shadow: 2px 2px var(--dark-grey);
     color: var(--blue); font-family: 'Viga';
+    z-index: 2; /* Keep this */
 }
 
 .main-image{
-
     width: 100%; 
     object-fit: cover; 
-    z-index: 1;
+    z-index: 1; /* Keep this */
+    position: relative; /* Keep this */
 }
 
+  /* For mobile devices */
 @media screen and (max-width: 340px) {
-    .main-image{
+   .main-image{
         height: 50vh; 
+    }
+   .main-text{
+        position: absolute;
+        font-size: calc(3vw + 2em); 
+        
     }
 }
   
   /* For large devices */
   @media screen and (min-width: 1118px) {
-        .main-image{
+       .main-image{
             height: 100vh; 
+        }
+       .main-text{ 
+            top: 50%; 
+            transform: translate(-50%, -50%);
         }
     }

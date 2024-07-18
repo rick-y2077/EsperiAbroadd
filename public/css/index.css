@@ -21,21 +21,28 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    color: white; /* Adjust color as needed */
-    font-size: 3vw; /* Responsive font size */
+    color: var(--blue); /* Adjust color as needed */
+    font-size: 5vw; /* Responsive font size */
+    text-shadow: 2px 2px 4px var(--black); /* Adjust shadow*/
+    font-family: 'Viga';
+
   }
   
-  /* Media queries for different screen sizes */
-  
+  /* for mobile size */
   @media screen and (max-width: 340px) {
     .image-container {
       height: 50vh;
+    }
+    .image-container img {
+      width: 50%; /* Set image width to 50% of the page */
+      margin: 0 auto; /* Center the image horizontally */
     }
     .text-overlay {
       font-size: 2vw;
     }
   }
   
+  /* for standard size */
   @media screen and (min-width: 1118px) {
     .image-container {
       height: 100vh;

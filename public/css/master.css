@@ -393,13 +393,12 @@ main{
   grid-area: content2;
 }
 
+#moreText{
+  grid-area: moreText;
+}
 #articles{
   background-color: yellowgreen;
   grid-area: articles;
-}
-
-#moreText{
-  grid-area: moreText;
 }
 
 /* Hide scrollbar for WebKit browsers */

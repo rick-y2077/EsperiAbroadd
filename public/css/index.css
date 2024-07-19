@@ -3,12 +3,19 @@
     width: 100%;
     height: 100vh; /* Adjust as needed */
     overflow: hidden; /* Hide content that overflows the container */
+    background-color: var(--white);
+    overflow: hidden;
+    perspective: 1px;
+    transform-style: preserve-3d;
   }
   
   .image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
+    opacity: 65%;
+    transform:translate3d(0,0,-1px) scale(2);
+    z-index: -1;
   }
   
   .text-overlay {
@@ -60,7 +67,7 @@
   .content1{
     margin: 3rem;
     text-align: left;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .content2 img{
     width: 90%;
@@ -79,5 +86,10 @@
   
   .moreText{
     margin: 2rem;
+    font-size: 1.2rem;
     text-align: left;
+  }
+
+  .titolo{
+    font-size: 2.5rem;
   }

@@ -390,7 +390,6 @@ main{
 }
 
 #content2{
-  background-color: blue;
   grid-area: content2;
 }
 
@@ -400,7 +399,6 @@ main{
 }
 
 #moreText{
-  background-color: violet;
   grid-area: moreText;
 }
 

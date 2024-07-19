@@ -59,8 +59,8 @@ body {
   grid-template-areas: 
     "main main"
     "content1 content2"
-    "articles articles"
     "moreText moreText"
+    "articles articles"
     "footer footer";
     grid-gap: 0.2rem;
 }
@@ -181,8 +181,8 @@ a {
       "main"
       "content1"
       "content2"
-      "articles"
       "moreText"
+      "articles"
       "footer";
   }
 

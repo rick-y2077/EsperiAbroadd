@@ -1,11 +1,11 @@
-.image-container-com {
+.image-container {
     position: relative;
     width: 100%;
     height: 100vh; 
     overflow: hidden; 
 }
   
-.image-container-com img {
+.image-container img {
     width: 100%;
     height: 100%;
     object-fit: cover; 
@@ -21,7 +21,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    color: var(--blue); 
+    color: var(--white); 
     font-size: 5vw; 
     text-shadow: 2px 2px 4px var(--black); 
     font-family: 'Viga';
@@ -29,10 +29,10 @@
 
 
 @media screen and (max-width: 340px) {
-    .image-container-com {
+    .image-container {
       height: 50vh;
     }
-    .image-container-com img {
+    .image-container img {
       width: 50%; 
       margin: 0 auto; 
     }
@@ -43,7 +43,7 @@
   
 
 @media screen and (min-width: 1118px) {
-    .image-container-com {
+    .image-container {
       height: 100vh;
     }
     .text-overlay {

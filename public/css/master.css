@@ -385,7 +385,7 @@ main{
 }
 
 #content1{
-  background-color: green;
+  font-family: var(--body-font);
   grid-area: content1;
 }
 

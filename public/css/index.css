@@ -51,3 +51,29 @@
       font-size: 4vw;
     }
   }
+
+  body {
+    
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr;
+  
+    grid-template-areas: 
+      "main main"
+      "content1 content2"
+      "articles articles"
+      "moreText moreText"
+      "footer footer";
+      grid-gap: 0.2rem;
+  }
+  
+  h3{
+    font-size: 2rem;
+    font-family: var(--body-font);
+    color: var(--blue);
+  }
+  .content1{
+    margin: 2rem;
+    text-align: left;
+  }

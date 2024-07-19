@@ -1,95 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=1">
-<title>Home</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
-<div class="wrapper_outer">
-	<div class="wrapper">
-
-		<section class="parallax_section">
-			<div class="parallax_bg" style="background-image: url(https://images.unsplash.com/photo-1610482650877-a580984185a0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80);"></div>
-			<h2>CSS3 <br> Parallax Effect</h2>
-		</section>
-	</div>
-</div>
-
-
-
-</body>
-</html>
-
-
-
------------------------------------------------------------------------------
 
 
 
 
-*,*:after,*:before{
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-ms-box-sizing: border-box;
-	box-sizing: border-box;
-}
-body{
-	font-family: arial;
-	font-size: 16px;
-	margin: 0;
-	background: #fff;
-	color: #000;
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+-- parallax serio
+----------------------------------------------------------------------------------------------------------------------------------------
+
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Monument Extended", Arial, Helvetica, sans-serif;
 }
 
-.wrapper_outer{
-	height: 100vh;
-	overflow: hidden;
+body {
+    color: white;
+    margin: 0;
+    padding: 0;
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-.wrapper{
-	height: 100%;
-	overflow-x: hidden;
 
-	perspective: 1px;
+header {
+    box-sizing: border-box;
+    min-height: 100vh;
+    position: relative;
+    transform-style: inherit;
+    width: 100vw;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-.parallax_section{
-	box-sizing: border-box;
-	min-height: 100vh;
-	padding: 10vh 10vh;
-	position: relative;
-	width: 100vw;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 1;
-
-	overflow: hidden;
-
-	transform-style: preserve-3d;
+header h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.parallax_bg{
-	position: absolute;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	background-size: cover;
-	background-position: center center;
-	z-index: -1;
-	min-height: 100%; 
 
-	transform: translate3d(0,0,-1px) scale(2);
+header,
+header:before {
+    background: 50% 50% / cover;
 }
-h2{
-	color: #fff;
-	margin: 0 0 10px;
-	font-size: 120px;
-	text-shadow: 2px 2px 2px rgba(0,0,0,0.4);
-	text-align: center;
-	text-transform: uppercase;
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url(/assets/img/background.jpg);
+    background-size: cover;
+    transform-origin: center center 0;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
 }
+
+.container {
+    z-index: 2;
+    position: absolute;
+    top: 100vh;
+    background: black;
+    line-height: 30px;
+    font-weight: lighter;
+    padding: 40px;
+    color: grey;
+}
+
+
 
 
 

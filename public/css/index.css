@@ -1,131 +1,127 @@
+/* Container for the image */
 .image-container {
   position: relative;
   width: 100%;
   height: 100vh; 
   overflow: hidden; 
   background-color: var(--white);
-  overflow-x: hidden;
-  perspective: 1px;
-  transform-style: preserve-3d;
+  perspective: 1px; /* Create perspective */
+  transform-style: preserve-3d; /* Ensure 3D transform is preserved */
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
 }
 
+/* Parallax image */
 .image-container img {
   position: absolute;
   left: 0;
   top: 0;
-  right: 0;
-  bottom: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   opacity: 65%;
-  transform: translate3d(0, 0, -1px) scale(2);
+  transform: translateZ(-1px) scale(2); /* Create parallax effect */
   z-index: -1;
 }
 
-  
+/* Text overlay */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--blue); /* Adjust color as needed */
+  font-size: 5vw; /* Responsive font size */
+  text-shadow: 2px 2px 4px var(--black); /* Adjust shadow */
+  font-family: 'Viga';
+}
+
+/* Mobile size adjustments */
+@media screen and (max-width: 340px) {
+  .image-container {
+    height: 50vh;
+  }
+  .image-container img {
+    width: 50%; /* Set image width to 50% of the page */
+    margin: 0 auto; /* Center the image horizontally */
+  }
   .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    color: var(--blue); /* Adjust color as needed */
-    font-size: 5vw; /* Responsive font size */
-    text-shadow: 2px 2px 4px var(--black); /* Adjust shadow*/
-    font-family: 'Viga';
-
-  }
-  
-  /* for mobile size */
-  @media screen and (max-width: 340px) {
-    .image-container {
-      height: 50vh;
-    }
-    .image-container img {
-      width: 50%; /* Set image width to 50% of the page */
-      margin: 0 auto; /* Center the image horizontally */
-    }
-    .text-overlay {
-      font-size: 2vw;
-    }
-
-    #articles {
-      /*metti immagini una sotto l'altra*/
-    }
-  }
-  
-  /* for standard size */
-  @media screen and (min-width: 1118px) {
-    .image-container {
-      height: 100vh;
-    }
-    .text-overlay {
-      font-size: 4vw;
-    }
-  }
-  
-  h3{
-    font-size: 2rem;
-    font-family: var(--body-font);
-    color: var(--blue);
-  }
-  .content1{
-    margin: 3rem;
-    text-align: left;
-    font-size: 1.2rem;
-  }
-  .content2 img{
-    width: 90%;
-    height: 90%;
-    position: relative;
-  }
-  
-  .content2{
-    margin: 1rem;
-    text-align: center;
-  }
-
-  main{
-    flex-wrap: wrap;
-  }
-  
-  .moreText{
-    margin: 2rem;
-    font-size: 1.2rem;
-    text-align: left;
-  }
-
-  .titolo{
-    font-size: 2.5rem;
+    font-size: 2vw;
   }
 
   #articles {
-    margin: 2rem;
-    display: flex;
-    justify-content: space-around;
+    /*metti immagini una sotto l'altra*/
   }
-  
-  #articles img {
-    object-fit:scale-down;
-    width: 30vw;
-    height: 40vh;
-    transition: 0.3s;
+}
+
+/* Standard size adjustments */
+@media screen and (min-width: 1118px) {
+  .image-container {
+    height: 100vh;
   }
-
-  #articles img:hover {
-    opacity: 60%;
-    transform: translateY(-10px);
-    
+  .text-overlay {
+    font-size: 4vw;
   }
+}
 
+h3 {
+  font-size: 2rem;
+  font-family: var(--body-font);
+  color: var(--blue);
+}
 
+.content1 {
+  margin: 3rem;
+  text-align: left;
+  font-size: 1.2rem;
+}
 
+.content2 img {
+  width: 90%;
+  height: 90%;
+  position: relative;
+}
+
+.content2 {
+  margin: 1rem;
+  text-align: center;
+}
+
+main {
+  flex-wrap: wrap;
+}
+
+.moreText {
+  margin: 2rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.titolo {
+  font-size: 2.5rem;
+}
+
+#articles {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#articles img {
+  object-fit: scale-down;
+  width: 30vw;
+  height: 40vh;
+  transition: 0.3s;
+}
+
+#articles img:hover {
+  opacity: 60%;
+  transform: translateY(-10px);
+}

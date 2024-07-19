@@ -42,6 +42,7 @@
     .text-overlay {
       font-size: 2vw;
     }
+
 }
   
 
@@ -64,4 +65,16 @@ h3{
   margin: 3rem;
   text-align: left;
   font-size: 1.2rem;
+}
+.content2 img{
+  width: 90%;
+  height: 50%;
+  position: relative;
+}
+
+.content2{
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+
 }

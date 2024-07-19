@@ -1,22 +1,32 @@
 .image-container {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Adjust as needed */
-    overflow: hidden; /* Hide content that overflows the container */
-    background-color: var(--white);
-    overflow: hidden;
-    perspective: 1px;
-    transform-style: preserve-3d;
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    opacity: 65%;
-    transform:translate3d(0,0,-1px) scale(2);
-    z-index: -1;
-  }
+  position: relative;
+  width: 100%;
+  height: 100vh; 
+  overflow: hidden; 
+  background-color: var(--white);
+  overflow-x: hidden;
+  perspective: 1px;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.image-container img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 65%;
+  transform: translate3d(0, 0, -1px) scale(2);
+  z-index: -1;
+}
+
   
   .text-overlay {
     position: absolute;
@@ -46,6 +56,10 @@
     }
     .text-overlay {
       font-size: 2vw;
+    }
+
+    #articles {
+      /*metti immagini una sotto l'altra*/
     }
   }
   
@@ -93,3 +107,25 @@
   .titolo{
     font-size: 2.5rem;
   }
+
+  #articles {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #articles img {
+    object-fit:scale-down;
+    width: 30vw;
+    height: 40vh;
+    transition: 0.3s;
+  }
+
+  #articles img:hover {
+    opacity: 60%;
+    transform: translateY(-10px);
+    
+  }
+
+
+

@@ -10,12 +10,29 @@
 
 .parallax {
   background-image: url("../content/altri_prog/parlamento.jpg");
-
   min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+/* Text overlay */
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--blue); 
+  font-size: 5vw; 
+  text-shadow: 2px 2px 4px var(--black); 
+  font-family: 'Viga';
 }
   
 .image-container img {
@@ -26,9 +43,6 @@
     
 }
 
-
-
-  
 .text-overlay {
     position: absolute;
     top: 50%;
@@ -47,25 +61,145 @@
 
 /*=======================================================================================================*/
 
-h3{
-    font-size: 2rem;
-    font-family: var(--body-font);
-    color: var(--blue);
+@media screen and (min-width: 1118px) {
+  .image-container {
+    height: 50vh;
   }
-  .content1{
-    margin: 3rem;
-    text-align: left;
-    font-size: 1.2rem;
+  .image-container img {
+    width: 50%; 
+    margin: 0 auto; 
   }
-  .content2 img{
-    width: 90%;
-    height: 50%;
-    position: relative;
+  .text-overlay {
+    font-size: 2vw;
   }
-  
-  .content2{
-    margin: 1rem;
+  #articles {
     display: flex;
+    flex-direction: column; 
     align-items: center;
-  
   }
+
+  body {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.8fr 0.5fr, 0.7fr, 0.6fr, 0.9fr, 0.4fr;
+  
+    grid-template-areas: 
+      "main main"
+      "content1 content2"
+      "content3 content4"
+      "content5 content6"
+      "articles articles"
+      "footer footer";
+      grid-gap: 0.2rem;
+  }
+
+}
+
+
+@media screen and (max-width: 1118px) {
+  .image-container {
+    height: 100vh;
+  }
+  .text-overlay {
+    font-size: 4vw;
+  }
+
+  body {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.7fr, 0.6fr, 0.9fr, 0.4fr;
+
+    grid-template-areas: 
+      "main"
+      "content1"
+      "content2"
+      "content4"
+      "content3"
+      "content5"
+      "content6"
+      "moreText"
+      "articles"
+      "footer";
+  }
+
+}
+
+
+h3{
+font-size: 2rem;
+font-family: var(--body-font);
+color: var(--blue);
+}
+.content1{
+  grid-area: content1;
+margin: 3rem;
+text-align: left;
+font-size: 1.2rem;
+}
+.content2 img{
+position: relative;
+width: 50%;
+height: 90%;
+}
+
+.content2{
+  grid-area: content2;
+margin: 1rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.content3{
+  grid-area: content3;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content3 img{
+  position: relative;
+  width: 70%;
+  height: 50%;
+}
+.content4{
+  grid-area: content4;
+  margin: 3rem;
+  text-align: left;
+  font-size: 1.2rem;
+}
+
+.content5{
+  grid-area: content5;
+}
+
+.content6{
+  grid-area: content6;
+}
+
+
+#articles {
+  margin: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+#articles img {
+  object-fit: scale-down;
+  width: 15vw;
+  height: 40vh;
+  transition: 0.3s;
+}
+
+#articles img:hover {
+  opacity: 60%;
+  transform: translateY(-10px);
+}
+
+.post-slider{
+  border: 1px solid red;
+}
+
+.post-slider .post-wrapper{
+  border: 1px dashed red;
+  width: 84%;
+}

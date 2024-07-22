@@ -157,8 +157,8 @@ justify-content: center;
 
 .content3 img{
   position: relative;
-  width: 70%;
-  height: 50%;
+  width: 80%;
+  height: 60%;
 }
 .content4{
   grid-area: content4;

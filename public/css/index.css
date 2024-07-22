@@ -1,19 +1,34 @@
-/* Container for the image */
+.parallax {
+  background-image: url("../content/commissione/parlamento.jpg");
+
+  min-height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax::before{
+  background-size: cover;
+  content: '';
+  inset: 0;
+  opacity: 0.65;
+}
+
 .image-container {
   position: relative;
   width: 100%;
   height: 100vh; 
   overflow: hidden; 
   background-color: var(--white);
-  perspective: 1px; /* Create perspective */
-  transform-style: preserve-3d; /* Ensure 3D transform is preserved */
+  perspective: 1px; 
+  transform-style: preserve-3d; 
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1;
 }
 
-/* Parallax image */
 .image-container img {
   position: absolute;
   left: 0;
@@ -22,7 +37,7 @@
   height: 100%;
   object-fit: cover;
   opacity: 65%;
-  transform: translateZ(-1px) scale(2); /* Create parallax effect */
+  transform: translateZ(-1px) scale(2); 
   z-index: -1;
 }
 
@@ -32,19 +47,20 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
-  color: var(--blue); /* Adjust color as needed */
-  font-size: 5vw; /* Responsive font size */
-  text-shadow: 2px 2px 4px var(--black); /* Adjust shadow */
+  color: var(--blue); 
+  font-size: 5vw; 
+  text-shadow: 2px 2px 4px var(--black); 
   font-family: 'Viga';
 }
 
 /* Mobile size adjustments */
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 1118px) {
   .image-container {
     height: 50vh;
   }
@@ -57,7 +73,10 @@
   }
 
   #articles {
-    /*metti immagini una sotto l'altra*/
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+
   }
 }
 

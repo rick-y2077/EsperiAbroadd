@@ -10,8 +10,7 @@
 -- parallax serio
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-
-html {
+html, body {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -51,8 +50,8 @@ header h1 {
 }
 
 header,
-header:before {
-    background: 50% 50% / cover;
+header::before {
+    background: 50% 50% / cover no-repeat;
 }
 
 header::before {
@@ -63,7 +62,7 @@ header::before {
     right: 0;
     bottom: 0;
     display: block;
-    background: url(/assets/img/background.jpg);
+    background: url('/assets/img/background.jpg');
     background-size: cover;
     transform-origin: center center 0;
     transform: translateZ(-1px) scale(2);
@@ -81,11 +80,3 @@ header::before {
     padding: 40px;
     color: grey;
 }
-
-
-
-
-
-
-
-

@@ -477,3 +477,20 @@ main{
   margin-bottom: 10px;
   font-size: 20px;
 }
+
+/* Aggiungi questo CSS al tuo file CSS principale o in un nuovo file CSS */
+
+/* Effetto Parallax */
+.parallax {
+    /* L'immagine da usare */
+    background-image: url('../content/your-image.jpg'); /* Sostituisci con il percorso della tua immagine */
+
+    /* Imposta un'altezza */
+    min-height: 500px;
+
+    /* Crea l'effetto parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

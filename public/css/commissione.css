@@ -1,3 +1,6 @@
+
+/*==================================================text with parallax=====================================================*/
+
 .image-container {
     position: relative;
     width: 100%;
@@ -23,6 +26,9 @@
     opacity: 50%;
     
 }
+
+
+
   
 .text-overlay {
     position: absolute;
@@ -39,6 +45,8 @@
     text-shadow: 2px 2px 4px var(--black); 
     font-family: 'Viga';
 }
+
+/*=======================================================================================================*/
 
 
 @media screen and (max-width: 340px) {

@@ -47,6 +47,25 @@
 
 /*=======================================================================================================*/
 
-.text_content{
-    margin:
-}
+h3{
+    font-size: 2rem;
+    font-family: var(--body-font);
+    color: var(--blue);
+  }
+  .content1{
+    margin: 3rem;
+    text-align: left;
+    font-size: 1.2rem;
+  }
+  .content2 img{
+    width: 90%;
+    height: 50%;
+    position: relative;
+  }
+  
+  .content2{
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+  
+  }

@@ -20,6 +20,7 @@ const galleryContainer = document.querySelector('.gallery-container');
 const galleryControlsContainer = document.querySelector('.gallery-controls');
 const galleryControls = ['<', '>'];
 const galleryItems = document.querySelectorAll('.gallery-item');
+const eventDetailsElement = document.querySelector('#event-details');
 
 class Carousel {
     constructor(container, items, controls) {
@@ -49,6 +50,10 @@ class Carousel {
             this.carouselArray.push(this.carouselArray.shift());
         }
         this.updateGallery();
+        const activeItem = this.carouselArray.find((item, index) => index === 2);
+        const eventDate = activeItem.dataset.eventDate;
+        const eventLocation = activeItem.dataset.eventLocation;
+        eventDetailsElement.textContent = ` ${eventDate} - ${eventLocation}`;
     }
 
     setControls() {
@@ -69,9 +74,19 @@ class Carousel {
             });
         });
     }
+    useGalleryItems() {
+        this.carouselArray.forEach(item => {
+            item.addEventListener('click', e => {
+                const eventDate = item.dataset.eventDate;
+                const eventLocation = item.dataset.eventLocation;
+                eventDetailsElement.textContent = ` ${eventDate} - ${eventLocation}`;
+            });
+        });
+    }
 }
 
 const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
 
 exampleCarousel.setControls();
 exampleCarousel.useControls();
+exampleCarousel.useGalleryItems();

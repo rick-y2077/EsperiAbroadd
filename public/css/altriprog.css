@@ -320,4 +320,14 @@ justify-content: center;
 .gallery-title{
   padding: 1rem;
 }
+
+.titolo{
+  text-align: center;
+  font-family: Viga;
+  color: var(--blue);
+  font-size: 3rem;
+}
+.eventi-text{
+  text-align: center;
+}
                 

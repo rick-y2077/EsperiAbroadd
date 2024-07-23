@@ -235,7 +235,6 @@ justify-content: center;
 .gallery-controls{
   display: flex;
   justify-content: center;
-  margin: 25px 0;
   height: 100px;
 }
 
@@ -317,5 +316,8 @@ justify-content: center;
 }
 .gallery-nav li.gallery-item-selected{
   background: #555;
+}
+.gallery-title{
+  padding: 1rem;
 }
                 

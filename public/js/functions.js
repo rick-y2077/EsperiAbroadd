@@ -13,3 +13,10 @@ const showMenu = (toggleId, navId) =>{
  }
  
  showMenu('nav-toggle','nav-menu')
+
+ $('.autoplay').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+  })

@@ -151,7 +151,7 @@ justify-content: center;
 .content3 img{
   position: relative;
   width: 80%;
-  height: 60%;
+  height: 70%;
 }
 .content4{
   grid-area: content4;
@@ -162,10 +162,23 @@ justify-content: center;
 
 .content5{
   grid-area: content5;
+  margin: 3rem;
+  text-align: left;
+  font-size: 1.2rem;
 }
 
 .content6{
   grid-area: content6;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content6 img{
+  position: relative;
+  width: 80%;
+  height: 80%;
 }
 
 

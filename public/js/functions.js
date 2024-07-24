@@ -74,6 +74,7 @@ class Carousel {
             });
         });
     }
+
     useGalleryItems() {
         this.carouselArray.forEach(item => {
             item.addEventListener('click', e => {
@@ -85,8 +86,11 @@ class Carousel {
     }
 }
 
-const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
+const initialActiveItem = galleryItems[2]; 
+eventDetailsElement.textContent = ` ${initialActiveItem.dataset.eventDate} - ${initialActiveItem.dataset.eventLocation}`;
 
+const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
 exampleCarousel.setControls();
 exampleCarousel.useControls();
 exampleCarousel.useGalleryItems();
+

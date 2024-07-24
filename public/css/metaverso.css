@@ -9,7 +9,7 @@
 }
 
 .parallax {
-  background-image: url("../content/altri_prog/parlamento.jpg");
+  background-image: url("../content/metaverso/metaverso.jpg");
   min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -76,7 +76,7 @@
   
     grid-template-areas: 
       "main main"
-      "content1 content2"
+      "content1 content1"
       "footer footer";
       grid-gap: 0.2rem;
   }

@@ -44,7 +44,6 @@
   margin: 0;
 }
 
-
 body {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
@@ -170,6 +169,7 @@ a {
   .nav__list {
     background-color: var(--white);
     padding-top: 1rem;
+    
   }
 
 
@@ -317,7 +317,7 @@ a {
   .nav__list {
     height: 100%;
     display: flex;
-    column-gap: 3rem;
+    column-gap: 1.5rem;
   }
   .nav__link {
     height: 100%;
@@ -518,4 +518,8 @@ main{
   color: var(--blue);
   text-shadow: 2px 2px 4px var(--black); 
   font-family: 'Viga';
+}
+
+.no-wrap {
+  white-space: nowrap;
 }

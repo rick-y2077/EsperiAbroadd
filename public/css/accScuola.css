@@ -76,6 +76,7 @@
   
     grid-template-areas: 
       "main main"
+      "moreText moreText"
       "content1 content2"
       "content3 content4"
       "content5 content6"
@@ -101,13 +102,13 @@
 
     grid-template-areas: 
       "main"
+      "moreText"
       "content1"
       "content2"
       "content4"
       "content3"
       "content5"
       "content6"
-      "moreText"
       "articles"
       "footer";
   }
@@ -181,5 +182,9 @@ justify-content: center;
   height: 80%;
 }
 
+.moreText{
+  grid-area: moreText;
+  text-align: justify;
+}
 
 

@@ -1,4 +1,4 @@
-/*==================================================text with parallax=====================================================*/
+ /*==================================================text with parallax=====================================================*/
 
 .image-container {
     position: relative;
@@ -9,7 +9,7 @@
 }
 
 .parallax {
-  background-image: url("../content/altri_prog/parlamento.jpg");
+  background-image: url("../content/accscuola/acc.jpg");
   min-height: 100vh;
   background-attachment: fixed;
   background-position: center;

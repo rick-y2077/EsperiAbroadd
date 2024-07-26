@@ -50,10 +50,10 @@ class Carousel {
             this.carouselArray.push(this.carouselArray.shift());
         }
         this.updateGallery();
-        const activeItem = this.carouselArray.find((item, index) => index === 2);
+        const activeItem = this.carouselArray[2];
         const eventDate = activeItem.dataset.eventDate;
         const eventLocation = activeItem.dataset.eventLocation;
-        eventDetailsElement.textContent = ` ${eventDate} - ${eventLocation}`;
+        eventDetailsElement.textContent = eventDate ? `${eventDate} - ${eventLocation}` : `${eventLocation}`;
     }
 
     setControls() {
@@ -80,17 +80,29 @@ class Carousel {
             item.addEventListener('click', e => {
                 const eventDate = item.dataset.eventDate;
                 const eventLocation = item.dataset.eventLocation;
-                eventDetailsElement.textContent = ` ${eventDate} - ${eventLocation}`;
+                eventDetailsElement.textContent = eventDate ? `${eventDate} - ${eventLocation}` : `${eventLocation}`;
             });
         });
     }
 }
 
-const initialActiveItem = galleryItems[2]; 
-eventDetailsElement.textContent = ` ${initialActiveItem.dataset.eventDate} - ${initialActiveItem.dataset.eventLocation}`;
+// Imposta lo stato iniziale
+const initialActiveItem = galleryItems[2];
+const initialEventDate = initialActiveItem.dataset.eventDate;
+const initialEventLocation = initialActiveItem.dataset.eventLocation;
+eventDetailsElement.textContent = initialEventDate ? `${initialEventDate} - ${initialEventLocation}` : `${initialEventLocation}`;
 
 const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
 exampleCarousel.setControls();
 exampleCarousel.useControls();
 exampleCarousel.useGalleryItems();
 
+// Parte necessaria per aprire gli articoli
+document.querySelectorAll('.gallery-item').forEach(item => {
+    item.addEventListener('click', () => {
+        const href = item.getAttribute('data-href');
+        if (href) {
+            window.open(href, '_blank');
+        }
+    });
+});

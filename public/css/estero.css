@@ -1,0 +1,159 @@
+.parallax {
+    background-image: url("../content/pcto/bundesdienstflagge_2.jpg");
+  
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .parallax::before{
+    background-size: cover;
+    content: '';
+    inset: 0;
+    opacity: 0.65;
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    overflow: hidden; 
+    background-color: var(--white);
+    perspective: 1px; 
+    transform-style: preserve-3d; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+  
+  .image-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 65%;
+    transform: translateZ(-1px) scale(2); 
+    z-index: -1;
+  }
+  
+  /* Text overlay */
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: var(--white);
+    text-shadow: 2px 2px 4px var(--black); 
+    font-family: 'Viga';
+  }
+  
+  /* Mobile size adjustments */
+  @media screen and (max-width: 1118px) {
+    .image-container {
+      height: 50vh;
+    }
+    .image-container img {
+      width: 50%; /* Set image width to 50% of the page */
+      margin: 0 auto; /* Center the image horizontally */
+    }
+    .text-overlay {
+      font-size: 4vw;
+    }
+  
+    #articles {
+      display: flex;
+      flex-direction: column; 
+      align-items: center;
+  
+    }
+  }
+  
+  /* Standard size adjustments */
+  @media screen and (min-width: 1118px) {
+    .image-container {
+      height: 100vh;
+    }
+    .text-overlay {
+      font-size: 4vw;
+    }
+  }
+  
+  h3 {
+    font-size: 2rem;
+    font-family: var(--body-font);
+    color: var(--blue);
+  }
+  
+  .content1 {
+    margin: 3rem;
+    text-align: justify;
+    font-size: 1.2rem;
+  }
+  
+  .content2 video {
+    padding-top: 0.5rem;
+    max-width: auto;
+    max-height: 450px;
+  }
+  
+  
+  .content2 {
+    margin: 1rem;
+    text-align: center;
+  }
+  
+  main {
+    flex-wrap: wrap;
+  }
+  
+  .moreText {
+    grid-area: moreText;
+    margin: 2rem;
+    font-size: 1.2rem;
+    text-align: left;
+    text-align: center;
+  }
+  
+  .titolo {
+    font-size: 2.5rem;
+  }
+  
+  #articles {
+    margin: 2rem;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  #articles img {
+    object-fit: scale-down;
+    width: 30vw;
+    height: 40vh;
+    transition: 0.3s;
+  }
+  
+  #articles img:hover {
+    opacity: 60%;
+    transform: translateY(-10px);
+  }
+  
+  .nome{
+    color: var(--blue);
+    text-align: right;
+  }
+  
+  .nome2{
+    color: var(--blue);
+  }
+  
+  

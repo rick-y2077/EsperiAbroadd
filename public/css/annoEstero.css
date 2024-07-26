@@ -97,7 +97,7 @@ h3 {
 
 .content1 {
   margin: 3rem;
-  text-align: left;
+  text-align: justify;
   font-size: 1.2rem;
 }
 
@@ -147,5 +147,12 @@ main {
   transform: translateY(-10px);
 }
 
+.nome{
+  color: var(--blue);
+  text-align: right;
+}
 
+.nome2{
+  color: var(--blue);
+}
 

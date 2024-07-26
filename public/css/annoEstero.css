@@ -118,9 +118,11 @@ main {
 }
 
 .moreText {
+  grid-area: moreText;
   margin: 2rem;
   font-size: 1.2rem;
   text-align: left;
+  text-align: center;
 }
 
 .titolo {

@@ -122,7 +122,7 @@ position: relative;
 }
 
 .content2{
-  grid-area: content2;
+grid-area: content2;
 margin: 1rem;
 display: flex;
 align-items: center;

@@ -113,18 +113,18 @@ color: var(--blue);
 }
 .content1{
   grid-area: content1;
-margin: 3rem;
-text-align: left;
-font-size: 1.2rem;
+  margin: 3rem;
+  text-align: justify;
+  font-size: 1.2rem;
 }
 .content2 img{
-position: relative;
+  position: relative;
 }
 
 .content2{
-grid-area: content2;
-margin: 1rem;
-display: flex;
-align-items: center;
-justify-content: center;
+  grid-area: content2;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

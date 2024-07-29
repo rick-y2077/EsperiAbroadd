@@ -125,7 +125,7 @@ color: var(--blue);
 .content1{
 grid-area: content1;
 margin: 3rem;
-text-align: left;
+text-align: justify;
 font-size: 1.2rem;
 }
 .content2 img{
@@ -156,7 +156,7 @@ position: relative;
 .content4{
   grid-area: content4;
   margin: 3rem;
-  text-align: left;
+  text-align: justify;
   font-size: 1.2rem;
 }
 
@@ -183,7 +183,7 @@ position: relative;
 
 .moreText{
   grid-area: moreText;
-  text-align: justify;
+  text-align: center
 }
 
 

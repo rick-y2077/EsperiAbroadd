@@ -122,9 +122,9 @@ color: var(--blue);
 }
 .content1{
   grid-area: content1;
-margin: 3rem;
-text-align: left;
-font-size: 1.2rem;
+  margin: 3rem;
+  text-align: justify;
+  font-size: 1.2rem;
 }
 .content2 img{
 position: relative;
@@ -134,10 +134,10 @@ height: 90%;
 
 .content2{
   grid-area: content2;
-margin: 1rem;
-display: flex;
-align-items: center;
-justify-content: center;
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content3{
@@ -156,14 +156,14 @@ justify-content: center;
 .content4{
   grid-area: content4;
   margin: 3rem;
-  text-align: left;
+  text-align: justify;
   font-size: 1.2rem;
 }
 
 .content5{
   grid-area: content5;
   margin: 3rem;
-  text-align: left;
+  text-align: justify;
   font-size: 1.2rem;
 }
 

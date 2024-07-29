@@ -112,11 +112,22 @@ a {
 .nav__logo {
   display: inline-flex;
   align-items: center;
+  padding-left: 0;
+  padding-right: 0;
   column-gap: .25rem;
   font-weight: var(--font-semi-bold);
   /* Color highlighting when pressed on mobile devices */
   /*-webkit-tap-highlight-color: transparent;*/
 }
+
+
+.nav__logo img {
+  margin-left: 0;
+  padding-left: 0; 
+  position: relative; 
+  left: -20px;
+}
+
 
 .nav__logo i {
   font-weight: initial;

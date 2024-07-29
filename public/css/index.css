@@ -77,7 +77,68 @@
     align-items: center;
 
   }
+
+  body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.8fr, 0.8fr, 0.8fr;
+  
+    grid-template-areas: 
+      "main "
+      "content1" 
+      "content2"
+      "moreText"
+      "articles"
+      "meetingTitle"
+      "events"
+      "footer";
+      grid-gap: 0.2rem;
+  }
+
+  .events{
+    flex-direction: column;
+    align-items: center;
+  }
 }
+
+
+/*===================================EVENTI FINALI====================================*/
+
+.meeting-title{
+  grid-area: meetingTitle;
+  height: 10rem;
+  justify-self: center;
+  color: var(--blue);
+  font-size: 5rem;
+}
+
+.events {
+  grid-area: events;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  word-wrap: break-word;
+  padding-bottom: 2rem;
+}
+
+.events .event-block {
+  background-color: hsl(222, 26%, 80%);
+  width: 30%;
+  border-radius: 3%;
+  padding: 1rem; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.events .event-block:hover {
+  transform: translateY(-15px); /* Maggiore sollevamento al passaggio del mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Ombra più grande al passaggio del mouse */
+}
+
+
+/*===================================EVENTI FINALI====================================*/
 
 /* Standard size adjustments */
 @media screen and (min-width: 1118px) {
@@ -87,6 +148,24 @@
   .text-overlay {
     font-size: 4vw;
   }
+
+  body {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.8fr, 0.8fr, 0.5fr;
+  
+    grid-template-areas: 
+      "main main"
+      "content1 content2"
+      "moreText moreText"
+      "articles articles"
+      "meetingTitle meetingTitle"
+      "events events"
+      "footer footer";
+      grid-gap: 0.2rem;
+  }
+
 }
 
 h3 {
@@ -290,3 +369,21 @@ main {
   text-align: center;
 }
 
+/*==============================================EVENTS==============================================*/
+
+.title-event{
+  font-size: 3.5rem;
+  
+}
+
+.time-event{
+  font-size: 1.9rem;
+  color: var(--light-blue);
+}
+
+.desc-event{
+  font-size: 1.5rem;
+}
+.title{
+  font-size: 5rem;
+}

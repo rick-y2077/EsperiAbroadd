@@ -15,6 +15,7 @@
   --blue: #134783;
   --light-grey: #D0D0D0;
   --body-color: hsl(220, 100%, 97%);
+  --body-glass: hsla(220, 100%, 97%, 0.801);
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/

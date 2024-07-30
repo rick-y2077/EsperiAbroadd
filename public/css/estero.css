@@ -225,6 +225,7 @@ height: 80%;
   grid-area: moreText;
   margin: 3rem;
   font-size: 1.2rem;
+  text-align: justify;
 }
 
 .nome{

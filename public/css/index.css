@@ -162,6 +162,7 @@ h3 {
   margin: 3rem;
   text-align: left;
   font-size: 1.2rem;
+  text-align: justify;
 }
 
 .content2 img {
@@ -172,6 +173,7 @@ h3 {
 
 .content2 {
   margin: 1rem;
+  margin-top: 5rem;
   text-align: center;
 }
 
@@ -253,6 +255,7 @@ main {
   opacity: .4;
   transform: translateX(-50%);
 }
+
 
 .gallery-controls{
   display: flex;
@@ -374,6 +377,7 @@ main {
 
 
 .card-container{
+  grid-area: events;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -383,10 +387,11 @@ main {
 
 .card{
   width: 325px;
-  background-color: #f0f0f0;
+  background-color: hsl(221, 64%, 91%);
   border-radius: 10px;
   box-shadow: 0px 5px 10 px rgba(0,0,0,0.3);
   cursor: pointer;
+  
 }
 
 .card-content{
@@ -404,4 +409,10 @@ main {
   font-size: 17px;
   margin-bottom: 20px;
   color: #666;
+}
+
+
+.card-container .card {
+  transform: translateY(-15px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }

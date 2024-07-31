@@ -1,4 +1,4 @@
- /*==================================================text with parallax=====================================================*/
+/*==================================================text with parallax=====================================================*/
 
 .image-container {
     position: relative;
@@ -9,7 +9,7 @@
 }
 
 .parallax {
-  background-image: url("../content/accscuola/acc.jpg");
+  background-image: url("../content/utah/utah2024.jpg");
   min-height: 100vh;
   background-attachment: fixed;
   background-position: center;
@@ -72,15 +72,11 @@
   }
   body {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.8fr 0.5fr, 0.7fr, 0.6fr, 0.9fr, 0.4fr;
+    grid-template-rows: 1fr, 1.5fr, 1.2fr;
   
     grid-template-areas: 
       "main main"
-      "moreText moreText"
       "content1 content2"
-      "content3 content4"
-      "content5 content6"
-      "articles articles"
       "footer footer";
       grid-gap: 0.2rem;
   }
@@ -98,18 +94,12 @@
 
   body {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.7fr, 0.6fr, 0.9fr, 0.4fr;
+    grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr;
 
     grid-template-areas: 
       "main"
-      "moreText"
       "content1"
       "content2"
-      "content4"
-      "content3"
-      "content5"
-      "content6"
-      "articles"
       "footer";
   }
 
@@ -121,15 +111,16 @@ font-size: 2rem;
 font-family: var(--body-font);
 color: var(--blue);
 }
-
 .content1{
-grid-area: content1;
-margin: 3rem;
-text-align: justify;
-font-size: 1.2rem;
+  grid-area: content1;
+  margin: 3rem;
+  text-align: justify;
+  font-size: 1.2rem;
 }
 .content2 img{
-position: relative;
+  position: relative;
+  width: 80%;
+  height: auto;
 }
 
 .content2{
@@ -139,50 +130,3 @@ position: relative;
   align-items: center;
   justify-content: center;
 }
-
-.content3{
-  grid-area: content3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.content3 img{
-  position: relative;
-  width: 80%;
-  height: 70%;
-}
-.content4{
-  grid-area: content4;
-  margin: 4rem;
-  text-align: justify;
-  font-size: 1.2rem;
-}
-
-.content5{
-  grid-area: content5;
-  margin: 3rem;
-  text-align: left;
-  font-size: 1.2rem;
-}
-
-.content6{
-  grid-area: content6;
-  margin: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.content6 img{
-  position: relative;
-  width: 80%;
-  height: 80%;
-}
-
-.moreText{
-  grid-area: moreText;
-  text-align: center
-}
-
-

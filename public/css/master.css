@@ -197,8 +197,6 @@ a {
       "articles"
       "footer";
   }
-
-
 }
 
 .nav__link {
@@ -476,6 +474,7 @@ main{
   margin: 5px 10px;
   opacity: 0.5;
   transition: 0.3s;
+  text-align: center;
 }
 
 .menu-icon:hover{
@@ -490,13 +489,18 @@ main{
   font-size: 20px;
 }
 
-/* Aggiungi questo CSS al tuo file CSS principale o in un nuovo file CSS */
+.nomi{
+  color: var(--white);
+  font-size: 20px;
+  opacity: 70%;
+  text-align: center;
+}
 
 /*==========================PARALLAX=============================*/
 
 .parallax {
     /* L'immagine da usare */
-    background-image: url('../content/your-image.jpg'); /* Sostituisci con il percorso della tua immagine */
+    background-image: url('../content/your-image.jpg'); 
 
     /* Imposta un'altezza */
     min-height: 500px;

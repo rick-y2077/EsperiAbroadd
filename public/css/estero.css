@@ -125,10 +125,11 @@ color: var(--blue);
 
 .content1{
 grid-area: content1;
-margin: 3rem;
+margin: 2rem;
 text-align: justify;
 font-size: 1.2rem;
 }
+
 .content2 img{
 position: relative;
 }
@@ -138,6 +139,7 @@ position: relative;
   flex-direction: column;
   align-items: center;
   margin: 1rem;
+  margin-top: 7rem;
 }
 
 .large-image {

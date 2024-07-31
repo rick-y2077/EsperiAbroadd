@@ -135,7 +135,6 @@ color: var(--blue);
     margin-bottom: 0; /* Rimuove lo spazio sotto l'ultima immagine */
 }
 
-/* Aggiungi questa sezione al tuo file CSS */
 .link-container {
     margin-top: 20px; /* Spazio sopra il link */
     text-align: center; /* Centra il link orizzontalmente */
@@ -165,6 +164,7 @@ color: var(--blue);
   margin: 3rem;
   text-align: justify;
   font-size: 1.2rem;
+  margin-top: 9rem;
 }
 
 .content3 {

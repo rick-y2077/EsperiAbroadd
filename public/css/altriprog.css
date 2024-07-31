@@ -128,8 +128,8 @@ color: var(--blue);
 }
 .content2 img{
 position: relative;
-width: 50%;
-height: 90%;
+width: 60%;
+height: auto;
 }
 
 .content2{
@@ -151,7 +151,7 @@ height: 90%;
 .content3 img{
   position: relative;
   width: 80%;
-  height: 70%;
+  height: auto;
 }
 .content4{
   grid-area: content4;
@@ -178,8 +178,34 @@ height: 90%;
 .content6 img{
   position: relative;
   width: 80%;
-  height: 80%;
+  height: auto;
 }
 
+.posti{
+  font-weight: bold;
+  color: var(--blue);
+}
 
+.link-container {
+  margin-top: 20px; /* Spazio sopra il link */
+  text-align: center; /* Centra il link orizzontalmente */
+}
 
+.link-container a {
+  color: #0066cc; /* Colore del testo del link */
+  text-decoration: none; /* Rimuove la sottolineatura predefinita */
+  font-size: 1.2rem; /* Dimensione del testo */
+  font-weight: bold; /* Grassetto per il testo */
+  padding: 10px 20px; /* Spazio interno al link */
+  border-radius: 5px; /* Angoli arrotondati */
+  border: 2px solid #0066cc; /* Bordo del link */
+  background-color: #e6f2ff; /* Colore di sfondo */
+  display: inline-block; /* Mostra il link come blocco in linea */
+  transition: all 0.3s ease; /* Transizione fluida per cambiamenti di stile */
+}
+
+.link-container a:hover {
+  color: #004d99; /* Colore del testo quando il mouse è sopra */
+  background-color: #cce0ff; /* Colore di sfondo quando il mouse è sopra */
+  border-color: #004d99; /* Colore del bordo quando il mouse è sopra */
+}

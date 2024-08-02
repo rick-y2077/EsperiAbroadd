@@ -64,8 +64,8 @@
     height: 50vh;
   }
   .image-container img {
-    width: 50%; /* Set image width to 50% of the page */
-    margin: 0 auto; /* Center the image horizontally */
+    width: 50%; 
+    margin: 0 auto; 
   }
   .text-overlay {
     font-size: 4vw;

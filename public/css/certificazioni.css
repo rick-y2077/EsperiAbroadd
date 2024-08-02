@@ -125,38 +125,38 @@ color: var(--blue);
 }
 
 .content2 img {
-    width: 80%; /* Regola la larghezza come preferisci */
-    margin-bottom: 1rem; /* Spazio tra le immagini */
-    max-width: 600px; /* Imposta una larghezza massima se necessario */
-    height: auto; /* Mantiene le proporzioni delle immagini */
+    width: 80%; 
+    margin-bottom: 1rem; 
+    max-width: 600px; 
+    height: auto; 
 }
 
 .content2 img:last-child {
-    margin-bottom: 0; /* Rimuove lo spazio sotto l'ultima immagine */
+    margin-bottom: 0; 
 }
 
 .link-container {
-    margin-top: 20px; /* Spazio sopra il link */
-    text-align: center; /* Centra il link orizzontalmente */
+    margin-top: 20px; 
+    text-align: center; 
 }
 
 .link-container a {
-    color: #0066cc; /* Colore del testo del link */
-    text-decoration: none; /* Rimuove la sottolineatura predefinita */
-    font-size: 1.2rem; /* Dimensione del testo */
-    font-weight: bold; /* Grassetto per il testo */
-    padding: 10px 20px; /* Spazio interno al link */
-    border-radius: 5px; /* Angoli arrotondati */
-    border: 2px solid #0066cc; /* Bordo del link */
-    background-color: #e6f2ff; /* Colore di sfondo */
-    display: inline-block; /* Mostra il link come blocco in linea */
-    transition: all 0.3s ease; /* Transizione fluida per cambiamenti di stile */
+    color: #0066cc; 
+    text-decoration: none; 
+    font-size: 1.2rem; 
+    font-weight: bold; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    border: 2px solid #0066cc; 
+    background-color: #e6f2ff; 
+    display: inline-block; 
+    transition: all 0.3s ease; 
 }
 
 .link-container a:hover {
-    color: #004d99; /* Colore del testo quando il mouse è sopra */
-    background-color: #cce0ff; /* Colore di sfondo quando il mouse è sopra */
-    border-color: #004d99; /* Colore del bordo quando il mouse è sopra */
+    color: #004d99; 
+    background-color: #cce0ff; 
+    border-color: #004d99; 
 }
 
 .content4{
@@ -182,7 +182,6 @@ color: var(--blue);
   overflow: hidden; 
 }
 
-/* Style for the large image */
 .large-image img {
   width: 100%;
   height: 100%;

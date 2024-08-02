@@ -51,8 +51,15 @@
     }
      body {
          grid-template-columns: 1fr 1fr;
-         grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.8fr 0.5fr, 0.7fr, 0.6fr, 0.9fr, 0.4fr;
-         grid-template-areas: "main main" "moreText moreText" "content1 content2" "content3 content4" "content5 content6" "articles articles" "footer footer";
+         grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.8fr 0.5fr, 0.7fr;
+         grid-template-areas: "main main" 
+                              "moreText moreText" 
+                              "content1 content2" 
+                              "content4 content4" 
+                              "logos logos"
+                              "content5 content6" 
+                              "articles articles" 
+                              "footer footer";
          grid-gap: 0.2rem;
     }
 }
@@ -65,9 +72,19 @@
     }
      body {
          grid-template-columns: 1fr;
-         grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.7fr, 0.6fr, 0.9fr, 0.4fr;
-         grid-template-areas: "main" "moreText" "content1" "content2" "content4" "content3" "content5" "content6" "articles" "footer";
+         grid-template-rows: 1fr, 1.5fr, 1.2fr, 0.8fr, 0.5fr, 0.7fr, 0.6fr, 0.9fr, 0.4fr, 0.8fr;
+         grid-template-areas: "main" 
+                              "moreText" 
+                              "content1" 
+                              "content2" 
+                              "content4" 
+                              "logos" 
+                              "content5" 
+                              "content6" 
+                              "articles" 
+                              "footer";
     }
+
 }
  h3{
      font-size: 2rem;
@@ -94,16 +111,18 @@
      display: flex;
      align-items: center;
      justify-content: center;
+     height: auto;
 }
  .content3 img{
      position: relative;
-     width: 80%;
+     width: 20%;
      height: 70%;
+     margin: 0.5rem;
 }
  .content4{
      grid-area: content4;
      margin: 4rem;
-     text-align: justify;
+     text-align: center;
      font-size: 1.2rem;
 }
  .content5{
@@ -191,3 +210,68 @@
 #slider #prev:hover, #slider #next:hover {
   background-color: rgba(0, 0, 0, 0.7);
 }
+
+
+
+
+
+
+/*=============================0============LOGO SLIDER INFINITY==========================================*/
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.logos {
+  grid-area: logos;
+  overflow: hidden;
+  padding: 1rem 0;
+  background: var(--body-font);
+  white-space: nowrap;
+  position: relative;
+  padding-bottom: 8rem;
+}
+
+.logos:before,
+.logos:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--white));
+}
+
+.logos:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--white));
+}
+
+.logos:hover .logos-slide {
+  animation-play-state: paused;
+}
+
+.logos-slide {
+  display: inline-block;
+  animation: 35s slide infinite linear;
+}
+
+.logos-slide img {
+  height: 100px;
+  margin: 0 40px;
+}
+
+
+
+
+/*=============================0============LOGO SLIDER INFINITY==========================================*/
